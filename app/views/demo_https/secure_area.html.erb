@@ -1,0 +1,9 @@
+<h1>
+  Área segura (HTTPS)
+</h1>
+<p>
+  <%= link_to 'Área insegura via HTTP (não causa redirecionamento)', insecure_area_url %>
+</p>
+<p>
+  <%= link_to 'Área insegura via HTTPS (causa redirecionamento)', insecure_area_url(protocol: 'https') %>
+</p>

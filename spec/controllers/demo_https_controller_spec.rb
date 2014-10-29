@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe DemoHttpsController do
+  render_views
+
   describe 'GET insecure_area' do
     context 'with HTTP' do
       before { get :insecure_area }
