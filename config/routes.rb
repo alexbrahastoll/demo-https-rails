@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root 'demo_https#insecure_area'
+
+  # DemoHttpsController
+  get 'insecure_area', to: 'demo_https#insecure_area'
+  get 'secure_area', to: 'demo_https#secure_area'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
