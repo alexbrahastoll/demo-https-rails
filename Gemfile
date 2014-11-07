@@ -43,3 +43,5 @@ gem 'pry', '~> 0.10.1'
 gem 'rspec-rails', '~> 3.1.0', group: [:development, :test]
 
 gem 'thin', '~> 1.6.3'
+# gem 'puma', '~> 2.9.2'
+# gem 'passenger', '~> 4.0.53'

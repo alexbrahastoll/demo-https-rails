@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ .secure {
+   color: #00B233;
+ }
+
+ .insecure {
+   color: #B20000;
+ }
