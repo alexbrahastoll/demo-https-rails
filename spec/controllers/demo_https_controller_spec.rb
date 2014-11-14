@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe DemoHttpsController do
   render_views
+  let(:redirect_protocol) { response.header['Location'].split(':').first }
 
   describe 'GET insecure_area' do
     context 'with HTTP' do
@@ -17,6 +18,7 @@ RSpec.describe DemoHttpsController do
       end
 
       it { expect(response).to have_http_status(301) }
+      it { expect(redirect_protocol).to eq('http') }
     end
   end
 
@@ -25,6 +27,7 @@ RSpec.describe DemoHttpsController do
       before { get :secure_area }
 
       it { expect(response).to have_http_status(301) }
+      it { expect(redirect_protocol).to eq('https') }
     end
 
     context 'with HTTPS' do
